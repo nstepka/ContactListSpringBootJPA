@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Company Contacts</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Contact Details</h1>
+            <hr/>
+            <div class="navbar">
+                <ul class="nav nav-tabs">
+                    <li role="presentation">
+                        <a href="/index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/displayContactsPage">
+                            Contacts
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/displaySearchPage">
+                            Search
+                        </a>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+        <p>
+            Name: <span th:text="${contact.firstName}"/> <span th:text="${contact.lastName}"/>
+        </p>
+        <p>
+            Company: <span th:text="${contact.company}"/>
+        </p>
+        <p>
+            Phone: <span th:text="${contact.phone}"/>
+        </p>
+        <p>
+            Email: <span th:text="${contact.email}"/>
+        </p>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-3.1.1.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
